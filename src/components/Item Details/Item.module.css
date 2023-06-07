@@ -1,0 +1,23 @@
+.item {
+  text-align: center;
+}
+
+.item h2 {
+  margin: 0;
+}
+
+.item img {
+  width: 200px;
+}
+
+.button {
+  background-image: linear-gradient(135deg, yellow, orange, pink);
+  width: 120px;
+  margin: 0 auto;
+  font-size: larger;
+}
+
+.button a {
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,11 @@
+h1 {
+  margin: 0;
+}
+.heading {
+  padding: 25px;
+  margin: 0;
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Josefin Sans";
+  font-size: x-large;
+}
