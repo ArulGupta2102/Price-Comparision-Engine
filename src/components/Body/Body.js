@@ -5,22 +5,26 @@ import Search from "../Search/Search";
 import Item from "../Item Details/Item";
 import Loading from "../UI/Loading/Loading";
 
-const Body = (props) => {
+const Body = () => {
   var dataA = {
     amazon: {
-      title: "",
-      img: "",
-      price: "",
-      link: "",
+      item1: {
+        title: "",
+        img: "",
+        price: "",
+        site: "",
+      },
     },
   };
 
   var dataF = {
     flipkart: {
-      title: "",
-      img: "",
-      price: "",
-      link: "",
+      item1: {
+        title: "",
+        img: "",
+        price: "",
+        site: "",
+      },
     },
   };
 
@@ -35,7 +39,8 @@ const Body = (props) => {
     const temp = { Title: item };
     setIsLoading(true);
     const response = await fetch(
-      "https://exuberant-ray-overalls.cyclic.app/testAPI",
+      // "https://exuberant-ray-overalls.cyclic.app/testAPI",
+      "http://localhost:3001/testAPI",
       {
         method: "POST",
         headers: {
@@ -58,30 +63,36 @@ const Body = (props) => {
       <div className={classes.cards}>
         <Card className={classes.bottom_padding}>
           <div className={`${classes.logo} ${classes.margin}`}>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/603px-Amazon_logo.svg.png" />
+            <img
+              alt="Amazon"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/603px-Amazon_logo.svg.png"
+            />
           </div>
           <br />
           {isLoading && <Loading />}
           {!isLoading && (
             <Item
-              img={data.amazon.img}
-              title={data.amazon.title}
-              price={data.amazon.price}
-              site={data.amazon.site}
+              img={data.amazon.item1.img}
+              title={data.amazon.item1.title}
+              price={data.amazon.item1.price}
+              site={data.amazon.item1.site}
             />
           )}
         </Card>
         <Card className={classes.bottom_padding}>
           <div className={classes.logo}>
-            <img src="https://1000logos.net/wp-content/uploads/2021/02/Flipkart-logo.png" />
+            <img
+              alt="Flipkart"
+              src="https://1000logos.net/wp-content/uploads/2021/02/Flipkart-logo.png"
+            />
           </div>
           {isLoading && <Loading />}
           {!isLoading && (
             <Item
-              img={data.flipkart.img}
-              title={data.flipkart.title}
-              price={data.flipkart.price}
-              site={data.flipkart.site}
+              img={data.flipkart.item1.img}
+              title={data.flipkart.item1.title}
+              price={data.flipkart.item1.price}
+              site={data.flipkart.item1.site}
             />
           )}
         </Card>
