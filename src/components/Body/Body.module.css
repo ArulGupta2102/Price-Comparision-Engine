@@ -2,6 +2,13 @@
   display: flex;
   justify-content: space-around;
 }
+
+@media screen and (max-width: 1350px) {
+  .cards {
+    gap: 20px;
+  }
+}
+
 .logo {
   text-align: center;
   display: block;
@@ -57,4 +64,13 @@
 .gap {
   display: grid;
   gap: 1.5rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .cards {
+    display: grid;
+  }
+}
+
+@media screen and (max-width: 650px) {
 }
