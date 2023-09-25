@@ -40,8 +40,8 @@ const Body = () => {
     const temp = { Title: item };
     setIsLoading(true);
     const response = await fetch(
-      // "https://exuberant-ray-overalls.cyclic.app/testAPI",
-      "http://localhost:3001/testAPI",
+      "https://exuberant-ray-overalls.cyclic.app/testAPI",
+      // "http://localhost:3001/testAPI",
       {
         method: "POST",
         headers: {
