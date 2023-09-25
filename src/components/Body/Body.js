@@ -4,6 +4,7 @@ import Card from "../UI/Card/Card";
 import Search from "../Search/Search";
 import Item from "../Item Details/Item";
 import Loading from "../UI/Loading/Loading";
+import List from "./List";
 
 const Body = () => {
   var dataA = {
@@ -39,8 +40,8 @@ const Body = () => {
     const temp = { Title: item };
     setIsLoading(true);
     const response = await fetch(
-      "https://exuberant-ray-overalls.cyclic.app/testAPI",
-      // "http://localhost:3001/testAPI",
+      // "https://exuberant-ray-overalls.cyclic.app/testAPI",
+      "http://localhost:3001/testAPI",
       {
         method: "POST",
         headers: {
@@ -78,6 +79,7 @@ const Body = () => {
               site={data.amazon.item1.site}
             />
           )}
+          {/* {!isLoading && <List obj={data.amazon} />} */}
         </Card>
         <Card className={classes.bottom_padding}>
           <div className={classes.logo}>
