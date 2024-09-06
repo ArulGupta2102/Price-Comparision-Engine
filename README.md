@@ -1,6 +1,7 @@
 # SITE LINK
 
 Site Link : https://e-commerce-price-comp.netlify.app/
+(The backend is not working at the moment)
 
 # Getting Started with Create React App
 
